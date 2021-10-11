@@ -1,23 +1,23 @@
-<h4>Billing Address</h4>
+<h4>Informe os seus dados</h4>
 <hr class="padding-bottom-1x">
 <form *ngIf="formAddress" [formGroup]="formAddress">
   <div class="row">
     <div class="col-sm-6">
       <div class="form-group" [ngClass]="{'has-danger': formAddress.get('firstname').invalid && formAddress.get('firstname').touched}">
-        <label for="firstname">First Name</label>
+        <label for="firstname">Nome</label>
         <input class="form-control" type="text" id="firstname" name="firstname" formControlName="firstname">
         <div class="form-control-feedback" *ngIf="formAddress.get('firstname').invalid && formAddress.get('firstname').touched">Please enter your firstname!</div>
       </div>
     </div>
     <div class="col-sm-6">
       <div class="form-group" [ngClass]="{'has-danger': formAddress.get('lastname').invalid && formAddress.get('lastname').touched}">
-        <label for="lastname">Last Name</label>
+        <label for="lastname">Sobrenome</label>
         <input class="form-control" type="text" id="lastname" name="lastname" formControlName="lastname">
         <div class="form-control-feedback" *ngIf="formAddress.get('lastname').invalid && formAddress.get('lastname').touched">Please enter your lastname!</div>
       </div>
     </div>
   </div>
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-sm-6">
       <div class="form-group" [ngClass]="{'has-danger': formAddress.get('address1').invalid && formAddress.get('address1').touched}">
         <label for="address1">Address 1</label>
@@ -47,23 +47,23 @@
         <div class="form-control-feedback" *ngIf="formAddress.get('city').invalid && formAddress.get('city').touched">Please enter your city!</div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="row">
     <div class="col-sm-6">
       <div class="form-group" [ngClass]="{'has-danger': formAddress.get('email').invalid && formAddress.get('email').touched}">
-        <label for="email">E-mail Address</label>
+        <label for="email">E-mail</label>
         <input class="form-control" type="email" id="email" name="email" formControlName="email">
         <div class="form-control-feedback" *ngIf="formAddress.get('email').invalid && formAddress.get('email').touched">Please enter your E-mail!</div>
       </div>
     </div>
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="phone">Phone Number</label>
+        <label for="phone">Telefone</label>
         <input class="form-control" type="text" id="phone" name="phone" formControlName="phone">
       </div>
     </div>
   </div>
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-sm-6">
       <div class="form-group">
         <label for="company">Company</label>
@@ -78,8 +78,8 @@
         </select>
       </div>
     </div>
-  </div>
-  <h4>Shipping Address</h4>
+  </div> -->
+  <!-- <h4>Shipping Address</h4>
   <hr class="padding-bottom-1x">
   <div class="form-group">
     <label class="custom-control custom-checkbox">
@@ -88,7 +88,7 @@
       <span class="custom-control-description">Same as billing address</span>
       <a href="" (click)="onFillForm($event)">Debug: Fill out form</a>
     </label>
-  </div>
+  </div> -->
 </form>
 
 <app-checkout-footer [buttons]="['backToCart', 'continue']"  (continue)="onContinue()" [continueEnabled]="formAddress.valid"></app-checkout-footer>

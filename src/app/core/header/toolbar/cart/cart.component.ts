@@ -20,6 +20,7 @@ export class ToolbarCartComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.items = this.cartService.getItems();
+    console.log(this.items)
     this.total = this.cartService.getTotal();
     this.cartSubscription = this.cartService.itemsChanged.subscribe(
       (items: CartItem[]) => {

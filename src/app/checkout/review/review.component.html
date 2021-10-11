@@ -1,10 +1,10 @@
-<h4>Review Your Order</h4>
+<h4>Revise o seu pedido</h4>
 <hr class="padding-bottom-1x">
 <div class="table-responsive shopping-cart">
   <table class="table">
     <thead>
       <tr>
-        <th>Product Name</th>
+        <th>Nome do Produto</th>
         <th class="text-center">Subtotal</th>
         <th></th>
       </tr>
@@ -41,23 +41,23 @@
 </div>
 <div class="row padding-top-1x mt-3">
   <div class="col-sm-6">
-    <h5>Shipping to:</h5>
+    <h5>Pedido para:</h5>
     <ul class="list-unstyled">
       <li>
-        <span class="text-muted">Client:</span>{{customer.firstname}} {{customer.lastname}}</li>
+        <span class="text-muted">Cliente:</span>{{customer.firstname}} {{customer.lastname}}</li>
+      <!-- <li>
+        <span class="text-muted">Address:</span>{{customer.address1}} {{customer.address2}}</li> -->
       <li>
-        <span class="text-muted">Address:</span>{{customer.address1}} {{customer.address2}}</li>
-      <li>
-        <span class="text-muted">Phone:</span>{{customer.phone}}</li>
+        <span class="text-muted">Telefone:</span>{{customer.phone}}</li>
     </ul>
   </div>
-  <div class="col-sm-6">
+  <!-- <div class="col-sm-6">
     <h5>Payment method:</h5>
     <ul class="list-unstyled">
       <li>
         <span class="text-muted">{{ paymentMethod }}</span></li>
     </ul>
-  </div>
+  </div> -->
 </div>
 
 <app-checkout-footer [buttons]="['back', 'completeOrder']" (back)="onBack()" (completeOrder)="onCompleteOrder()"></app-checkout-footer>
