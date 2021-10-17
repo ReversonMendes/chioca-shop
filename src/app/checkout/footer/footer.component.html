@@ -12,8 +12,8 @@
     <button *ngIf="buttons.includes('continue')" class="btn btn-primary" href="" (click)="onContinue($event)" [disabled]="!continueEnabled">
       <span class="hidden-xs-down">Continuar&nbsp;</span><i class="icon-arrow-right"></i>
     </button>
-    <button *ngIf="buttons.includes('completeOrder')" class="btn btn-primary" href="" (click)="onCompleteOrder($event)">
+    <a *ngIf="buttons.includes('completeOrder')" class="btn btn-primary" href="{{link}}"  target="_blank" (click)="onCompleteOrder($event)">
       <span class="hidden-xs-down">Enviar Pedido pelo Whatsapp</span><span class="d-sm-none">Finalizar</span>
-    </button>
+    </a>
   </div>
 </div>

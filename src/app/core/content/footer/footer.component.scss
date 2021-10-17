@@ -3,7 +3,7 @@
 
 .site-footer {
   padding-top: floor($grid-vertical-step * 3); //~72px;
-  background-color: $gray-darker;
+  background-color: $black-color;
   @media (max-width: $screen-md) {
     padding-top: floor($grid-vertical-step * 2); //~48px;
   }

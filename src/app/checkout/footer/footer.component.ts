@@ -8,9 +8,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class FooterComponent {
   @Input() buttons: string[];
   @Input() continueEnabled: boolean;
+  @Input() link?: string;
   @Output() back: EventEmitter<void> = new EventEmitter<void>();
   @Output() continue: EventEmitter<void> = new EventEmitter<void>();
   @Output() completeOrder: EventEmitter<void> = new EventEmitter<void>();
+
+  whatssap = this.link;
 
   onBack(e: Event) {
     this.back.emit();

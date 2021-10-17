@@ -51,10 +51,10 @@ export class AddressComponent implements OnInit, OnDestroy {
       //   Validators.pattern(/^\d\d\d\d$/)
       // ]),
       // city: new FormControl(null, Validators.required),
-      email: new FormControl(
-        this.user && this.user.email,
-        Validators.email
-      ),
+      // email: new FormControl(
+      //   this.user && this.user.email,
+      //   Validators.email
+      // ),
       phone: new FormControl(null),
       // company: new FormControl(null),
       // country: new FormControl({ value: this.countries[0], disabled: false })
