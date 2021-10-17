@@ -76,7 +76,7 @@ export class ReviewComponent implements OnInit, OnDestroy {
     }
   }
 
-  private sendWhatssaps(){
+  public sendWhatssaps(){
 
     let phone  = "+5546999412130";
 
