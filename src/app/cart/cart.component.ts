@@ -26,6 +26,8 @@ export class CartComponent implements OnInit, OnDestroy {
         this.total = this.cartService.getTotal();
       }
     );
+
+    console.log(this.total);
   }
 
   public onClearCart(event) {

@@ -192,8 +192,15 @@ export class ProductService {
   public addProduct(data: { product: Product; files: FileList }) {
     const dbOperation = this.uploadService
       .startUpload(data)
-      .then((task) => {
-        data.product.imageURLs.push(task.downloadURL);
+      .then(async (task) => {
+        console.log(task);
+        console.log(data);
+        let url = await task.ref.getDownloadURL().then(function(downloadURL) {
+          console.log('File available at', downloadURL);
+          return downloadURL
+        });
+
+        data.product.imageURLs.push( url);
         data.product.imageRefs.push(task.ref.fullPath);
 
         return this.angularFireDatabase
@@ -205,6 +212,7 @@ export class ProductService {
         return data.product;
       })
       .catch((error) => {
+        console.log("Erro", error);
         this.messageService.addError(
           `Add Failed, Product ${data.product.name}`
         );

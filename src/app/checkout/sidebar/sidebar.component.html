@@ -7,15 +7,15 @@
     <table class="table">
       <tr>
         <td>Carrinho Subtotal:</td>
-        <td class="text-medium">{{cartSubtotal | currency}}</td>
+        <td class="text-medium">{{cartSubtotal | currency: 'BRL'}}</td>
       </tr>
       <tr>
         <td>Shipping:</td>
-        <td class="text-medium">{{shipping | currency}}</td>
+        <td class="text-medium">{{shipping | currency: 'BRL'}}</td>
       </tr>
       <tr>
         <td>Order Total:</td>
-        <td class="text-lg text-medium">{{orderTotal | currency}}</td>
+        <td class="text-lg text-medium">{{orderTotal | currency: 'BRL'}}</td>
       </tr>
     </table>
   </section>

@@ -28,7 +28,7 @@
         <span class="text-lg">Total:</span>
       </div>
       <div class="column text-right">
-        <span class="text-lg text-medium" [innerHTML]="total | currency">&nbsp;</span>
+        <span class="text-lg text-medium" [innerHTML]="total | currency: 'BRL'">&nbsp;</span>
       </div>
     </div>
     <div class="toolbar-dropdown-group">
@@ -36,7 +36,7 @@
         <a class="btn btn-sm btn-block btn-secondary" routerLink="/cart">Carrinho</a>
       </div>
       <div class="column">
-        <a class="btn btn-sm btn-block btn-success" routerLink="/checkout">Checkout</a>
+        <a class="btn btn-sm btn-block btn-success" routerLink="/checkout">Finalizar</a>
       </div>
     </div>
   </div>

@@ -75,19 +75,21 @@ export class RegisterLoginComponent implements OnInit {
   public onLogin() {
     this.authenticationService
       .emailLogin(this.loginForm.value.email, this.loginForm.value.password)
-      .then(
-        () => {
-          this.messageService.add('Login successful!');
-          this.router.navigate(['/home']);
-        },
-        (error) => {
-          if (error.code === 'auth/user-not-found') {
-            this.loginForm.controls.email.setErrors({ email: true });
-          }
-          if (error.code === 'auth/wrong-password') {
-            this.loginForm.controls.password.setErrors({ password: true });
-          }
-        }
-      );
+      this.messageService.add('Login successful!');
+      this.router.navigate(['/home']);
+      // .then(
+      //   () => {
+      //     this.messageService.add('Login successful!');
+      //     this.router.navigate(['/home']);
+      //   },
+      //   (error) => {
+      //     if (error.code === 'auth/user-not-found') {
+      //       this.loginForm.controls.email.setErrors({ email: true });
+      //     }
+      //     if (error.code === 'auth/wrong-password') {
+      //       this.loginForm.controls.password.setErrors({ password: true });
+      //     }
+      //   }
+      // );
   }
 }

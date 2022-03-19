@@ -1,4 +1,4 @@
-<section class="hero-slider" style="background-image: url(img/main-bg.jpg);">
+<section class="hero-slider" style="background-color: #ffff;">
 
   <ngx-siema *ngIf="items && items.length > 0" [options]="options" class="large-controls dots-inside">
 
@@ -8,11 +8,11 @@
           <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
             <div class="from-bottom">
               <div class="h2 text-body text-normal mb-2 pt-1">{{ item.name }}</div>
-              <div class="h2 text-body text-normal mb-4 pb-1">starting at
+              <div class="h2 text-body text-normal mb-4 pb-1">a partir de
                 <span class="text-bold"><app-price [product]="item"></app-price></span>
               </div>
             </div>
-            <a class="btn btn-primary scale-up delay-1" routerLink="/products/{{ item.id }}">Shop now</a>
+            <a class="btn btn-primary scale-up delay-1" routerLink="/products/{{ item.id }}">Comprar agora</a>
           </div>
           <div class="col-md-6 padding-bottom-2x mb-3">
             <div class="image-wrapper" [ngClass]="{'loading': !imagesLoaded.includes(item.imageFeaturedurl)}">

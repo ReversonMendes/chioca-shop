@@ -27,6 +27,7 @@ export class ReviewComponent implements OnInit, OnDestroy {
   paymentMethod: string;
   unsubscribe$ = new Subject();
   user: User;
+  URL_PRODUCTS = "http://oticachioca.kinghost.net/products/";
 
 
   constructor(
@@ -78,16 +79,15 @@ export class ReviewComponent implements OnInit, OnDestroy {
 
   public sendWhatssaps(){
 
-    let phone  = "+5546999412130";
+    let phone  = "+5546999417676";
+    let url_produt = "https://chioca-app-shop.web.app/products/";
 
     let produtos = this.items.map(function(item) {
-      return item['product'].name;
+      return item['product'].name + " - "+ url_produt +  item['product'].id + "\n";
     });
 
-    let message = "Olá Ótica Chioca, me chamo "+this.customer.firstname + " "+this.customer.lastname+ " e esses foram os produtos que escolhi: "+
+    let message = "Olá Ótica Chioca, me chamo "+this.customer.firstname + " "+this.customer.lastname+ "\n e esses foram os produtos que escolhi:\n"+
     "" + produtos;
-
-    console.log(message);
 
     // font: 
     let isMobile = false;
@@ -122,7 +122,6 @@ export class ReviewComponent implements OnInit, OnDestroy {
           return target
       }
 
-  console.log(target);
 }
 
   private submitUserOrder(order, total, userUid) {

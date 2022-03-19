@@ -21,11 +21,10 @@ const routes: Routes = [
   { path: 'products', component: ProductsListComponent },
   { path: 'products/:id', component: ProductDetailComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'admin/add', component: AddEditComponent, canActivate: [AdminGuard] },
+  { path: 'admin/add', component: AddEditComponent},
   {
     path: 'admin/edit/:id',
-    component: AddEditComponent,
-    canActivate: [AdminGuard]
+    component: AddEditComponent
   },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'register-login', component: RegisterLoginComponent },

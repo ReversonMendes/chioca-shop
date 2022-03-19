@@ -70,7 +70,7 @@ export class CartService {
   public getTotal() {
     let total = 0;
     this.cartItems.forEach((cartItem) => {
-      total += cartItem.amount * cartItem.product.price;
+      total += cartItem.amount * cartItem.product.priceNormal;
     });
     return total;
   }

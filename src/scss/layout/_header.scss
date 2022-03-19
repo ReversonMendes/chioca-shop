@@ -141,6 +141,7 @@
 // Search
 .site-search-wrapper {
   position: absolute;
+  left: -15px;
   width: 100%;
   height: 100%;
 }
@@ -446,7 +447,8 @@
       height: 100%;
       border-radius: 50%;
     }
-    &:hover { background-color: $gray-lighter; }
+    background-color: $gray-lighter;
+    &:hover { background-color: $gray; }
 	}
   .account, .cart {
     > a::after {

@@ -32,7 +32,7 @@ export class NavigationOffCanvasComponent implements OnInit, OnDestroy {
   public onLogout(e: Event) {
     this.offcanvasService.closeOffcanvasNavigation();
     this.authService.signOut();
-    this.router.navigate(['/register-login']);
+    //this.router.navigate(['/register-login']);
     e.preventDefault();
   }
 

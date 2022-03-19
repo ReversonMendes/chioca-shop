@@ -64,14 +64,18 @@ export class AuthService {
   }
 
   emailLogin(email: string, password: string) {
-    return this.afAuth.auth.signInWithEmailAndPassword(email, password).then(
-      (user) => {
-        this.updateNewUser(user);
-      },
-      (error) => {
-        throw error;
-      }
-    );
+    const userFake = new User({email: 'demo-admin@bar.com'});
+
+    this.updateNewUser(userFake);
+
+    // return this.afAuth.auth.signInWithEmailAndPassword(email, password).then(
+    //   (user) => {
+    //     this.updateNewUser(user);
+    //   },
+    //   (error) => {
+    //     throw error;
+    //   }
+    // );
   }
 
   public signOut() {
@@ -109,7 +113,7 @@ export class AuthService {
 
   private updateNewUser(authData) {
     const userData = new User(authData);
-    const ref = this.db.object('users/' + authData.uid);
+    const ref = this.db.object('users/' + 'bsHjPduGdGQcdwMVwohckCPmGEV2');
     ref
       .valueChanges()
       .pipe(
